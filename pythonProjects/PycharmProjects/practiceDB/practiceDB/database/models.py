@@ -6,7 +6,6 @@ class database(models.Model):
     student_id = models.AutoField
     student_image = models.ImageField(upload_to="database\images", default="")
     student_name = models.TextField()
-    student_roll = models.CharField(max_length=50)
     student_class = models.CharField(max_length=50)
 
 
