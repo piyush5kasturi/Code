@@ -12,6 +12,93 @@
   </head>
   <body>
     <h1>Hello, world!</h1>
+<div class="card hidden" id="target" style="width: 14rem;">
+{% load static %}
+<!--{% static 'tree\chirag photo.jpg' %}-->
+
+  <img id="blah" src="https://us.123rf.com/450wm/apoev/apoev1903/apoev190300009/124806570-stock-vector-person-gray-photo-placeholder-man-in-t-shirt-on-gray-background.jpg?ver=6" src="readURL(this);" alt="your image" width="223" height="180" />
+  <input type='file' onchange="readURL(this);" />
+
+    <div class="card-body">
+<!--        <h3><p>{{images.0.image_person_name}}</p></h3>-->
+     <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default-name">NAME</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default-name">
+</div>
+      <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default-roll">ROLL NO.</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default-roll">
+</div>
+      <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default-class">CLASS</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default-class">
+</div>
+        <input class="btn btn-primary" type="submit" value="Submit">
+  </div>
+
+
+    </div>
+  </div> 
+   <center><div class="card hidden" id="target" style="width: 14rem;">
+{% load static %}
+<!--{% static 'tree\chirag photo.jpg' %}-->
+
+  <img id="blah" src="https://us.123rf.com/450wm/apoev/apoev1903/apoev190300009/124806570-stock-vector-person-gray-photo-placeholder-man-in-t-shirt-on-gray-background.jpg?ver=6" src="readURL(this);" alt="your image" width="223" height="180" />
+  <input type='file' onchange="readURL(this);" />
+
+    <div class="card-body">
+<!--        <h3><p>{{images.0.image_person_name}}</p></h3>-->
+     <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default-name">NAME</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default-name">
+</div>
+      <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default-roll">ROLL NO.</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default-roll">
+</div>
+      <div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="inputGroup-sizing-default-class">CLASS</span>
+  </div>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default-class">
+</div>
+        <input class="btn btn-primary" type="submit" value="Submit">
+  </div>
+
+
+    </div>
+  </div> </center>
+  <script>
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                     .width(223)
+                     .height(180);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+  </script>
+
+
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
