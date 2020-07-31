@@ -19,8 +19,8 @@
 {% load static %}
 <!--{% static 'tree\chirag photo.jpg' %}-->
 
-  <img id="blah" name="image" src="https://us.123rf.com/450wm/apoev/apoev1903/apoev190300009/124806570-stock-vector-person-gray-photo-placeholder-man-in-t-shirt-on-gray-background.jpg?ver=6" src="readURL(this);" alt="your image" width="223" height="180" />
-  <input type='file' onchange="readURL(this);" />
+  <img id="blah" name="image"  src="https://us.123rf.com/450wm/apoev/apoev1903/apoev190300009/124806570-stock-vector-person-gray-photo-placeholder-man-in-t-shirt-on-gray-background.jpg?ver=6" src="readURL(this);" alt="your image" width="223" height="180" />
+  <input type='file' onchange="readURL(this);" name="image"/>
 
     <div class="card-body">
 <!--        <h3><p>{{images.0.image_person_name}}</p></h3>-->
@@ -85,12 +85,6 @@
 
             reader.onload = function (e) {
                 $('#blah')
-                    .attr('src', e.target.result)
-                     .width(223)
-                     .height(180);
-            };
-            reader.onload = function (e) {
-                $('#blah1')
                     .attr('src', e.target.result)
                      .width(223)
                      .height(180);
