@@ -16,7 +16,9 @@
     <a href="{%static 'database/mystatic.txt'%}">click</a>
 <form action="" enctype="multipart/form-data" method="POST">
 {% csrf_token %}
-      <input type='file'   name="image"/>
+
+      <input type='file' onchange="readURL(this);" name="image"/>
+  <img id="blah" name="image" src="readURL(this);" alt="your image" width="223" height="180" />
    <div class="input-group mb-3">
   <div class="input-group-prepend">
     <span class="input-group-text" id="inputGroup-sizing-default-name">NAME</span>
@@ -36,14 +38,12 @@
        </div>
 
 </form>
- {% if uploaded_file_url %}
-    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
-  {% endif %}
+
 <!--<div class="card hidden" id="target" style="width: 14rem;">-->
 <!--{% load static %}-->
 <!--&lt;!&ndash;{% static 'tree\chirag photo.jpg' %}&ndash;&gt;-->
 
-<!--  <img id="blah" name="image"  src="https://us.123rf.com/450wm/apoev/apoev1903/apoev190300009/124806570-stock-vector-person-gray-photo-placeholder-man-in-t-shirt-on-gray-background.jpg?ver=6" src="readURL(this);" alt="your image" width="223" height="180" />-->
+<!--  <img id="blah" name="image" src="readURL(this);" alt="your image" width="223" height="180" />-->
 <!--  <input type='file' onchange="readURL(this);" name="image"/>-->
 
 <!--    <div class="card-body">-->
