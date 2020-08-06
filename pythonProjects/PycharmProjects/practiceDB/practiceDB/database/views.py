@@ -24,3 +24,6 @@ def index(request):
         Databaseee = database(student_name=student_name, student_class=student_class, student_image=student_image)
         Databaseee.save()
     return render(request, 'database/index.html')
+
+def card(request):
+    return render(request,'database/card.html')
