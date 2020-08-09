@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <title>Hello, world!</title>
+
   </head>
   <body>
     <h1>Hello, world!</h1>
@@ -45,8 +46,8 @@
 
 
 
-
-    <div class="card hidden" id="target" style="width: 14rem;">
+<div class="row container-fluid my-3 mx-5">
+    <div class="card hidden my-2 mx-2" id="target" style="width: 14rem;">
 {% load static %}
   <img id="blah1" name="image" src="/media/{{database.0.student_image}}" alt="your image" width="223" height="180" />
     <div class="card-body">
@@ -60,7 +61,7 @@
 {%for i in database|slice:"1:"%}
 
 
-    <div class="card hidden" style="width: 14rem;">
+    <div class="card hidden my-2 mx-2" style="width: 14rem;">
 {% load static %}
   <img  name="image" src="/media/{{i.student_image}}" alt="your image" width="223" height="180" />
     <div class="card-body">
@@ -74,6 +75,7 @@
     {%endif%}
 {% endfor %}
 
+</div>
 
 
 

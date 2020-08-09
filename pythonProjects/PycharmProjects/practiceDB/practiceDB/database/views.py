@@ -24,8 +24,8 @@ def index(request):
     data=database.objects.all()
     print(data)
     n=len(data)
-    nslides=n//4+ceil((n/4)-(n//4))
-    params={'no_of_slides':nslides,'range': range(1,nslides) , 'database': data}
+    # nslides=n//4+ceil((n/4)-(n//4))
+    params={'no_of_slides':n,'range': range(1,n) , 'database': data}
     return render(request, 'database/index.html',params)
 
 def card(request):
