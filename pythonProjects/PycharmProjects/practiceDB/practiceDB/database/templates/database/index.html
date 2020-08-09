@@ -39,6 +39,46 @@
 
 </form>
 
+
+
+
+
+
+
+
+    <div class="card hidden" id="target" style="width: 14rem;">
+{% load static %}
+  <img id="blah1" name="image" src="/media/{{database.0.student_image}}" alt="your image" width="223" height="180" />
+    <div class="card-body">
+<h5 class="card-title">{{database.0.student_name}}</h5>
+        <p class="card-text">{{database.0.student_class}}</p>
+        <input class="btn btn-primary" type="submit" value="Submit">
+  </div>
+    </div>
+
+
+{%for i in database|slice:"1:"%}
+
+
+    <div class="card hidden" style="width: 14rem;">
+{% load static %}
+  <img  name="image" src="/media/{{i.student_image}}" alt="your image" width="223" height="180" />
+    <div class="card-body">
+<h5 class="card-title">{{i.student_name}}</h5>
+        <p class="card-text">{{i.student_class}}</p>
+        <input class="btn btn-primary" type="submit" value="Submit">
+  </div>
+    </div>
+    {%if forloop.counter|divisibleby:3 and forloop.counter > 0%}
+    <br>
+    {%endif%}
+{% endfor %}
+
+
+
+
+
+
 <!--<div class="card hidden" id="target" style="width: 14rem;">-->
 <!--{% load static %}-->
 <!--&lt;!&ndash;{% static 'tree\chirag photo.jpg' %}&ndash;&gt;-->
